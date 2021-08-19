@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    image: nginx
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+      - ./ssl:/etc/nginx/ssl
+    ports:
+      - 80:80
+      - 443:443
